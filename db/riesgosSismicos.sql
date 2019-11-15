@@ -9,7 +9,7 @@ LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/db/tipoVialidad.csv' INTO TABLE
 
 create table daño(
     idDaño integer not null AUTO_INCREMENT,
-    tipoDaño char(35),
+    tipoDaño char(35) not null,
     
     PRIMARY KEY(idDaño)
 );
