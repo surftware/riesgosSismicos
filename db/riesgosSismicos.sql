@@ -13,7 +13,7 @@ create table daño(
     
     PRIMARY KEY(idDaño)
 );
-
+LOAD DATA LOCAL INFILE '/var/www/riesgosSisimicos/db/daño.csv' INTO TABLE daño CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table Ubicacion(
 
