@@ -1,11 +1,13 @@
 create database riesgosSismicos;
 use riesgosSismicos;
+
 create table sisEstruc(
     idSisEstruc integer not null AUTO_INCREMENT,
     tipoSistema char(25) not null,
 
     PRIMARY KEY(idSisEstruc)
     );
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/sisEstruc.csv' INTO TABLE tipoSistema CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table usoSuelo(
     idUsoSuelo integer not null AUTO_INCREMENT,
@@ -13,13 +15,15 @@ create table usoSuelo(
 
     PRIMARY KEY(idUsoSuelo)
     );
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/usoSuelo.csv' INTO TABLE tipoUsoSuelo CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table conFach(
     idConFach integer not null AUTO_INCREMENT,
-    tipoCOnFach char(25) not null,
+    tipoConFach char(25) not null,
 
     PRIMARY KEY(idConFach)
     );
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/conFach.csv' INTO TABLE tipoConFach CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table matPrinCons(
     idMatPrinCons integer not null AUTO_INCREMENT,
@@ -27,6 +31,7 @@ create table matPrinCons(
 
     PRIMARY KEY(idMatPrinCons)
     );
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/matPrinCons.csv' INTO TABLE tipoMatPrinCon CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table cimentacion(
     idCimentacion integer not null AUTO_INCREMENT,
@@ -34,6 +39,7 @@ create table cimentacion(
 
     PRIMARY KEY(idCimentacion)
   );
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/cimentacion.csv' INTO TABLE tipoCimen CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table reparacion(
     idReparacion integer not null AUTO_INCREMENT,
@@ -41,6 +47,8 @@ create table reparacion(
 
     PRIMARY KEY(idReparacion)
     );
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/reparacion.csv' INTO TABLE tipoReparacion CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
 
 create table agravante(
     idAgravante integer not null AUTO_INCREMENT,
@@ -48,6 +56,7 @@ create table agravante(
 
     PRIMARY KEY(idAgravante)
     );
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/agravante.csv' INTO TABLE tipoAgravante CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table estado(
     idEstado integer not null AUTO_INCREMENT,
@@ -55,13 +64,16 @@ create table estado(
 
     PRIMARY KEY(idEstado)
     );
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/estado.csv' INTO TABLE nombreEstado CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
 
 create table municipio(
       idMunicipio integer not null AUTO_INCREMENT,
-      tnombreMuni char(35) not null,
+      nombreMuni char(35) not null,
 
       PRIMARY KEY(idMunicipio)
       );
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/municipio.csv' INTO TABLE nombreMuni  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table tipoReferencia(
       idTipoReferencia integer not null AUTO_INCREMENT,
@@ -69,6 +81,7 @@ create table tipoReferencia(
 
       PRIMARY KEY(idTipoReferencia)
       );
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/tipoReferencia.csv' INTO TABLE tipoReferencia  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table referencia(
         idReferencia integer not null AUTO_INCREMENT,
@@ -147,6 +160,7 @@ create table tipoDano(
 
         PRIMARY KEY(idTipoDano)
         );
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/tipoDano.csv' INTO TABLE tipoAfect  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table nivelDano(
         idNivelDano integer not null AUTO_INCREMENT,
@@ -154,7 +168,8 @@ create table nivelDano(
 
         PRIMARY KEY(idNivelDano)
         );
-        
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/nivelDano.csv' INTO TABLE tipoNivel  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
 create table parametro(
         idParametro integer not null AUTO_INCREMENT,
         periEst float,
