@@ -1,3 +1,5 @@
+create database riesgosSismicos;
+use riesgosSismicos;
 create table sisEstruc(
     idSisEstruc integer not null AUTO_INCREMENT,
     tipoSistema char(25) not null,
@@ -11,6 +13,7 @@ create table usoSuelo(
 
     PRIMARY KEY(idUsoSuelo)
     );
+
 create table conFach(
     idConFach integer not null AUTO_INCREMENT,
     tipoCOnFach char(25) not null,
@@ -70,7 +73,7 @@ create table tipoReferencia(
 create table referencia(
         idReferencia integer not null AUTO_INCREMENT,
         nombreReferencia char(25) ,
-        tipoReferencia integer not null,,
+        tipoReferencia integer not null,
         aledaña boolean,
         PRIMARY KEY(idReferencia),
         FOREIGN KEY(tipoReferencia) REFERENCES tipoReferencia(idTipoReferencia)
@@ -80,7 +83,7 @@ create table coordenadas(
         idCoordenada integer not null AUTO_INCREMENT,
         coorX float not null,
         coorY float not null,
-        PRIMARY KEY(idcoordenada),
+        PRIMARY KEY(idCoordenada)
         );
 
 create table ubicacion(
@@ -94,6 +97,8 @@ create table ubicacion(
         FOREIGN KEY(coordenadas) REFERENCES coordenadas(idCoordenada),
         FOREIGN KEY(estado) REFERENCES estado(idEstado)
         );
+
+
 create table ubicacionTieneReferencia(
         idUbicacionTieneReferencia integer not null AUTO_INCREMENT,
         nombreReferencia char(25),
@@ -103,6 +108,7 @@ create table ubicacionTieneReferencia(
         FOREIGN KEY(ubicacion) REFERENCES ubicacion(idUbicacion),
         FOREIGN KEY(referencia) REFERENCES referencia(idReferencia)
         );
+
 create table edificio(
         idEdificio integer not null AUTO_INCREMENT,
         nombreEdificio char(25),
@@ -134,18 +140,21 @@ create table sismo(
         PRIMARY KEY(idSismo),
         FOREIGN KEY(coorSismo) REFERENCES coordenadas(idCoordenada)
         );
+
 create table tipoDano(
         idTipoDano integer not null AUTO_INCREMENT,
         tipoAfect CHARACTER(25),
 
         PRIMARY KEY(idTipoDano)
         );
+
 create table nivelDano(
         idNivelDano integer not null AUTO_INCREMENT,
         tipoNivel CHARACTER(20),
 
         PRIMARY KEY(idNivelDano)
         );
+        
 create table parametro(
         idParametro integer not null AUTO_INCREMENT,
         periEst float,
