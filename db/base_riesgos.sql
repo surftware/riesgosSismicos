@@ -70,8 +70,10 @@ LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/estado.csv' INTO TABLE esta
 create table municipio(
       idMunicipio integer not null AUTO_INCREMENT,
       nombreMuni char(35) not null,
+      estado integer not null,
 
-      PRIMARY KEY(idMunicipio)
+      PRIMARY KEY(idMunicipio),
+      FOREIGN KEY(estado) REFERENCES estado(idEstado)
       );
 LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/municipio.csv' INTO TABLE municipio  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
