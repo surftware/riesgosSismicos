@@ -3,60 +3,60 @@ use riesgosSismicos;
 
 create table sisEstruc(
     idSisEstruc integer not null AUTO_INCREMENT,
-    tipoSistema char(25) not null,
+    tipoSistema char(60) not null,
 
     PRIMARY KEY(idSisEstruc)
     );
-LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/sisEstruc.csv' INTO TABLE tipoSistema CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/sisEstruc.csv' INTO TABLE sisEstruc CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table usoSuelo(
     idUsoSuelo integer not null AUTO_INCREMENT,
-    tipoUsoSuelo char(25) not null,
+    tipoUsoSuelo char(29) not null,
 
     PRIMARY KEY(idUsoSuelo)
     );
-LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/usoSuelo.csv' INTO TABLE tipoUsoSuelo CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/usoSuelo.csv' INTO TABLE usoSuelo CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table conFach(
     idConFach integer not null AUTO_INCREMENT,
-    tipoConFach char(25) not null,
+    tipoConFach char(60) not null,
 
     PRIMARY KEY(idConFach)
     );
-LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/conFach.csv' INTO TABLE tipoConFach CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/conFach.csv' INTO TABLE conFach CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table matPrinCons(
     idMatPrinCons integer not null AUTO_INCREMENT,
-    tipoMatPrinCon char(25) not null,
+    tipoMatPrinCon char(12) not null,
 
     PRIMARY KEY(idMatPrinCons)
     );
-LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/matPrinCons.csv' INTO TABLE tipoMatPrinCon CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/matPrinCons.csv' INTO TABLE matPrinCons CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table cimentacion(
     idCimentacion integer not null AUTO_INCREMENT,
-    tipoCimen char(25) not null,
+    tipoCimen char(21) not null,
 
     PRIMARY KEY(idCimentacion)
   );
-LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/cimentacion.csv' INTO TABLE tipoCimen CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/cimentacion.csv' INTO TABLE cimentacion CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table reparacion(
     idReparacion integer not null AUTO_INCREMENT,
-    tipoReparacion char(25) not null,
+    tipoReparacion char(60) not null,
 
     PRIMARY KEY(idReparacion)
     );
-LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/reparacion.csv' INTO TABLE tipoReparacion CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/reparacion.csv' INTO TABLE reparacion CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 
 create table agravante(
     idAgravante integer not null AUTO_INCREMENT,
-    tipoAgravante char(25) not null,
+    tipoAgravante char(27) not null,
 
     PRIMARY KEY(idAgravante)
     );
-LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/agravante.csv' INTO TABLE tipoAgravante CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/agravante.csv' INTO TABLE agravante CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table estado(
     idEstado integer not null AUTO_INCREMENT,
@@ -64,7 +64,7 @@ create table estado(
 
     PRIMARY KEY(idEstado)
     );
-LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/estado.csv' INTO TABLE nombreEstado CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/estado.csv' INTO TABLE estado CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 
 create table municipio(
@@ -73,7 +73,7 @@ create table municipio(
 
       PRIMARY KEY(idMunicipio)
       );
-LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/municipio.csv' INTO TABLE nombreMuni  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/municipio.csv' INTO TABLE municipio  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table tipoReferencia(
       idTipoReferencia integer not null AUTO_INCREMENT,
@@ -81,7 +81,7 @@ create table tipoReferencia(
 
       PRIMARY KEY(idTipoReferencia)
       );
-LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/tipoReferencia.csv' INTO TABLE tipoReferencia  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/tipoReferencia.csv' INTO TABLE tipoReferencia  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table referencia(
         idReferencia integer not null AUTO_INCREMENT,
@@ -156,19 +156,19 @@ create table sismo(
 
 create table tipoDano(
         idTipoDano integer not null AUTO_INCREMENT,
-        tipoAfect CHARACTER(25),
+        tipoAfect CHARACTER(80),
 
         PRIMARY KEY(idTipoDano)
         );
-LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/tipoDano.csv' INTO TABLE tipoAfect  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/tipoDano.csv' INTO TABLE tipoDano  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table nivelDano(
         idNivelDano integer not null AUTO_INCREMENT,
-        tipoNivel CHARACTER(20),
+        tipoNivel CHARACTER(16),
 
         PRIMARY KEY(idNivelDano)
         );
-LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/CSV/nivelDano.csv' INTO TABLE tipoNivel  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/nivelDano.csv' INTO TABLE nivelDano  CHARACTER SET UTF8 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 create table parametro(
         idParametro integer not null AUTO_INCREMENT,
