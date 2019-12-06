@@ -19,7 +19,7 @@ LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/usoSuelo.csv' INTO TABLE us
 
 create table conFach(
     idConFach integer not null AUTO_INCREMENT,
-    tipoConFach char(60) not null,
+    tipoConFach char(76) not null,
 
     PRIMARY KEY(idConFach)
     );
@@ -52,7 +52,7 @@ LOAD DATA LOCAL INFILE '/var/www/riesgosSismicos/csv/reparacion.csv' INTO TABLE 
 
 create table agravante(
     idAgravante integer not null AUTO_INCREMENT,
-    tipoAgravante char(27) not null,
+    tipoAgravante char(32) not null,
 
     PRIMARY KEY(idAgravante)
     );
@@ -158,7 +158,7 @@ create table sismo(
 
 create table tipoDano(
         idTipoDano integer not null AUTO_INCREMENT,
-        tipoAfect CHARACTER(80),
+        tipoAfect CHARACTER(108),
 
         PRIMARY KEY(idTipoDano)
         );
