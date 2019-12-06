@@ -1,0 +1,98 @@
+<!--Desarrollado por:
+ Armando Arciniega Solano
+surftware@gmail.com
+www.surftware.com.mx
+diseño y desarrollo páginas web y sistemas computacinales.
+
+5511894621
+
+Bajo licencia:
+
+Versión 0.1
+
+Ultima Actualización: 25-nov-2019
+-->
+<!DOCTYPE html>
+<html>
+
+<?php	 
+	$tituloPagina="Index | Riesgos Sismicos";
+	include_once ("includes/head.php"); 	  
+ ?>
+
+<body>
+  <?php
+  include_once ("includes/nav.php"); 
+ ?>
+  <div class="section seccionBusqueda">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 offset-md-3">
+          <form role="form-control formulario" method="POST" action="index.php">
+
+            <h3>Búsquedas por id, nombre o apellidos:</h3>
+            <input class="form-control" type="text" name="consultar">
+            <input class="btn-buscar btn-default " type="submit" name="enviar" VALUE="Buscar">
+          </form>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <?php
+   define (BASE_PATH,'/var/www/agendaSurftware');
+   include_once (BASE_PATH.'/php/newConnection.php');
+   
+   $consulta = "SELECT * FROM contacto WHERE (idContacto = '$buscar' || nombre LIKE '%$buscar%' || apPat LIKE '%$buscar%' || apMat LIKE '%$buscar%' ) ORDER BY apPat";
+   $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+
+   while ($row = mysqli_fetch_array( $resultado ))
+   {
+    $idContacto=$row['idContacto'];
+    $nombre=$row['nombre'];
+    $apPat=$row['apPat'];
+    $apMat=$row['apMat'];
+    $email =$row['email'];
+    $cumple=$row['cumple'];
+    
+    echo '
+   <div class="section">
+    <div class="container">
+     <div class="row">
+     <div class="rojo2"> </div>
+      <div class="col-md-12">
+       <h2 class="text-center">Datos Contacto ID:  '.$idContacto.'</h2>
+      </div>
+     <div class="row">
+      <div class="col-md-6">
+       <p class="p-body" class="">   Nombre completo: </p>
+       <p clas="">'.$row['titulo']." ".$apPat." ".$apMat." ".$nombre.'</p>
+      </div>
+      <div class="col-md-2">
+       <p class="p-body">Cumpleaños: </p>
+       <p>'.$row['cumple'].'</p>
+      </div>
+      <div class="col-md-4">
+       <p class="p-body">E-mail: </p>
+       <p>'.$row['email'].'</p>
+      </div>
+     </div>
+    </div>
+   </div>';
+
+    }  
+  ?>
+
+
+
+  <?php
+  include_once ("includes/footer.php");
+  include_once ("includes/js.php");
+  
+  ?>
+
+</body>
+
+</html>

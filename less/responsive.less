@@ -1,0 +1,810 @@
+@phone:   ~"(max-width: 767px)";
+@tablet:    ~"(max-width: 1039px)";
+@desktop:   ~"(max-width: 1200px)";
+@lg-desktop:   ~"(max-width: 1930px)";
+/*
+|===================
+| DESKTOP
+|===================
+*/
+/* CONTAINER WIDTH */
+@media screen and (min-width: 1200px)  {
+	.container {
+	    width: 1200px;
+	}
+}
+/*
+|===================
+| TABLET
+|===================
+*/
+
+@media @tablet {
+/* DEFAULT STYLES */
+	.button {
+    	&_small {
+			min-width: 110px;
+            padding: 7px;
+            font-size: 11px;
+    	}
+    	&_medium {
+			min-width: 132px;
+			padding: 11px;
+			font-size: 12px;
+    	}
+    	&_large {
+			min-width: 170px;
+			padding: 14px;
+			font-size: 13px;
+    	}
+    }
+	.pt-100 {
+	    padding-top: 50px;
+	}
+	.pb-100 {
+	    padding-bottom: 50px;
+	}
+	.ptb-100 {
+	    padding: 50px 0;
+	}
+	.pt-88 {
+	    padding-top: 40px;
+	}
+	.pb-88 {
+	    padding-bottom: 40px;
+	}
+	.ptb-88 {
+	    padding: 40px 0;
+	}
+	.pt-36 {
+	    padding-top: 25px;
+	}
+	.pb-36 {
+	    padding-bottom: 25px;
+	}
+	.ptb-36 {
+	    padding: 25px 0;
+	}
+	.social__item:not(:first-child) {
+	    margin-left: 3px;
+	}
+/* TEXT STYLES */
+	.header_title {
+		font-size: 60px;
+	}
+	.title {
+		font-size: 40px;
+	}
+	.title_2 {
+		font-size: 32px;
+	}
+	.title_3 {
+		font-size: 28px;
+	}
+	.text_name {
+		font-size: 16px;
+	}
+	.steps_item {
+		font-size: 33px;
+	}
+	.animate_numbers {
+		font-size: 60px;
+	}
+	.product_price {
+		font-size: 39px;
+	}
+	.position {
+		font-size: 22px;
+	}
+	.plans_price {
+		font-size: 54px;
+	}
+/* HEADER */
+	.header {
+		.welcome {
+			padding-top: 10px;
+			.actions {
+				margin-bottom: 50px;
+	            a:not(:first-child) {
+	                margin-left: 10px;
+	            }
+	        }
+		}
+		.navigation {
+	        padding: 15px 0;
+	    }
+	    .tagline {
+	    	margin-bottom: 30px;
+	    	&:before {
+	    		top: calc(~'100% + 13px');
+	    		width: 35px;
+	    	}
+	    }
+	    .subdescription {
+	    	margin-bottom: 32px;
+	    }
+	}
+/* ABOUT */
+	.about {
+		padding-top: 40px;
+	    &_us {
+	        padding-top: 0px;
+	    }
+	    .welcome {
+	        margin-bottom: 8px;
+	    }
+	    .title {
+	        margin-bottom: 8px;
+	    }
+	    .description {
+	        margin-bottom: 15px;
+	    }
+	    .button {
+	        margin-top: 0px;
+	        margin-bottom: 40px;
+	    }
+	}
+/* ADVANTAGES */
+	.advantages {
+	    .welcome {
+	        margin-bottom: 10px;
+	    }
+	    .title {
+	        margin-bottom: 20px;
+	    }
+	    .description {
+	        margin-bottom: 40px;
+	    }
+	    .advantage_icon {
+	        width: 85px;
+	        height: 85px;
+	        line-height: 85px;
+	        text-align: center;
+	        margin-bottom: 16px;
+	    }
+	    .advantage_name {
+	        margin-bottom: 8px;
+	    }
+	    .advantage_descr  {
+	    	margin-bottom: 20px;
+	    }
+	}
+/* ADVANTAGES */
+	.callback {
+	    .button {
+	    	margin-top: 9px;
+	    }
+	}
+/* MEMBER */
+	.member {
+	    &_info {
+	        .title {
+	            margin-bottom: 20px;
+	        }
+	        .description {
+	            margin-bottom: 25px;
+	        }
+	    }
+	    /* Progress bar styles */
+	    .bars {
+	        margin-bottom: 22px;
+	        .progressbar {
+	            width: 100%;
+	            margin-top: 5px;
+	            margin-bottom: 8px;
+	            position: relative;
+	        }
+	        .proggress {
+	            height: 14px;
+	            width: 10px;
+	            border-radius: 30px;
+	        }
+	        .percentCount {
+	            position: absolute;
+	            right: 0;
+	            top: -30px;
+	            font-weight: bold;
+	            font-family: "Open Sans", sans-serif;
+	            font-size: 15px;
+	        }
+	    }
+	    .socials {
+	    	.social__link_style-2 {
+	    		width: 32px;
+	    		height: 32px;
+	    		line-height: 32px;
+	    		font-size: 18px;
+	    	}
+	    }
+	}
+/* CLIENTS */
+	.clients {
+		padding: 50px 0 70px;
+	    .title {
+	        margin-bottom: 40px;
+	        font-size: 30px;
+	    }
+	    .owl-carousel {
+	    	padding: 0 40px;
+	    	.owl-dots {
+	    		top: 20px;
+	    	}
+	    }
+	}
+/* TEAM */
+	.team {
+	    .welcome {
+	        margin-bottom: 10px;
+	    }
+	    .title {
+	        margin-bottom: 20px;
+	        font-size: 30px;
+	    }
+	    &_member {
+	        margin-bottom: 20px;
+	    }
+	    .member_description {
+	        margin-bottom: 7px;
+	    }
+	    .description {
+	        margin-bottom: 15px;
+	    }
+	    .socials {
+	        .social__item:not(:first-child) {
+	            margin-left: 10px;
+	        }
+	    }
+	}
+/* STEPS */
+	.steps {
+	    .welcome {
+	        margin-bottom: 10px;
+	    }
+	    .title {
+	        margin-bottom: 20px;
+	        font-size: 30px;
+	    }
+	    &_item {
+	        width: 90px;
+	        height: 90px;
+	        margin-bottom: 14px;
+	        line-height: 90px;
+	    }
+	    .description {
+	        margin-bottom: 14px;
+	    }
+	}
+/* GALLERY */
+	.gallery {
+	    .button {
+	        margin-top: 9px;
+	    }
+	}
+/* NUMBERS */
+	.numbers {
+	    &_description {
+	    	font-size: 13px;
+	    }
+	}
+/* PRODUCTS */
+	.product {
+	    padding: 70px 0;
+	    &_info {
+	        .welcome {
+	            margin-bottom: 10px;
+	        }
+	        .title {
+	            margin-bottom: 20px;
+	        }
+	        .description {
+	            margin-bottom: 14px;
+	        }
+	    }
+	    &_price {
+	        margin-bottom: 30px;
+	    }
+	}
+/* QUESTIONS */
+	.questions {
+	    .accordion {
+	    	.card {
+	    		.card-header {
+			        .accordion_title {
+			            padding: 12px 20px 12px 55px;
+			            &:after {
+			                width: 35px;
+			                height: 35px;
+			                line-height: 35px;
+			                font-size: 13px;
+			            }
+			        }
+			    }
+	            .card-block {
+	                padding: 12px 20px 12px 55px;
+	                &:before {
+	                	left: 55px;
+	                	right: 55px;
+	                }
+	                p {
+	                	padding-right: 30px;
+	                }
+	            }
+	            .accordion_content {
+		            font-size: 13px;
+		            line-height: 1.4;
+		        }
+		        ul {
+		        	li {
+		        		margin-bottom: 6px;
+						padding: 0 0 0 19px;
+						font-size: 13px;
+		            	line-height: 1.4;
+		        	}
+		        }
+	    	}
+	    }
+	}
+/* VACANCIES */
+	.vacancies {
+	    &_info {
+	        padding-top: 0px;
+	        .position {
+	            margin-bottom: 9px;
+	        }
+	        .description {
+	            margin-bottom: 30px;
+	        }
+	    }
+	}
+/* TESTIMONIALS */
+	.testimonials {
+	    .welcome {
+	        margin-bottom: 9px;
+	    }
+	    .title {
+	        margin-bottom: 30px;
+	    }
+	    .text_name {
+	        margin-bottom: 5px;
+	    }
+	    .testimonial_block {
+	        padding: 14px;
+	    }
+	    .description {
+			font-size: 14px;
+			line-height: 1.6;
+	    }
+	}
+	/* PRICING */
+	.pricing {
+	    &_item {
+	        padding-bottom: 25px;
+	        .plans {
+	            &_title {
+	                padding: 14px 0;
+	                margin-bottom: 25px;
+	            }
+	            &_info {
+	                padding: 0 17px;
+	            }
+	            &_price {
+	                margin-bottom: 25px;
+	            }
+	            &_description {
+	                margin-bottom: 19px;
+	                line-height: 1.4;
+	                font-size: 13px;
+	            }
+	            &_name {
+	            	font-size: 20px;
+	            }
+	        }
+	    }
+	}
+/* PROJECT TIMELINE */
+	.timeline {
+	    padding: 55px 0 40px;
+	    .title {
+	        margin-bottom: 20px;
+	        font-size: 30px;
+	    }
+	    &_image {
+	        margin-bottom: 7px;
+	    }
+	}
+/* CONTACTS */
+	.contacts {
+	    .title {
+	        margin-bottom: 15px;
+	    }
+	    .description {
+	        margin-bottom: 30px;
+	    }
+	    .form {
+	        &_field {
+	            height: 45px;
+	            padding: 12px 20px;
+	            margin-bottom: 9px;
+	            font-size: 13px;
+	        }
+	        &_textarea {
+	            padding: 12px 20px;
+	            margin-bottom: 9px;
+	            font-size: 13px;
+	        }
+	    }
+	}
+/* FOOTER */
+	.footer {
+	    padding: 40px 0 26px;
+	    &_logo {
+	        margin-bottom: 10px;
+	    }
+	    .description {
+	        margin-bottom: 25px;
+	        font-size: 13px;
+	    }
+	    .links {
+	        .item {
+	            &:not(:first-child) {
+	                margin-top: 14px;
+	            }
+	            .link {
+	                font-size: 13px;
+	            }
+	        }
+	    }
+	    h2 {
+	        font-size: 13px;
+	        margin-bottom: 16px;
+	    }
+	    .details {
+	        margin-bottom: 16px;
+	        font-size: 13px;
+	        span {
+	            margin-right: 4px;
+	        }
+	    }
+	    .form {
+	        &_field {
+	            height: 47px;
+	            padding: 11px 20px;
+	            margin-bottom: 9px;
+	            font-size: 13px;
+	        }
+	    }
+	}
+}
+
+/*
+|===================
+| PHONE
+|===================
+*/
+/* CONTAINER WIDTH */
+@media @phone {
+/* DEFAULT STYLES */
+	.pt-100 {
+	    padding-top: 40px;
+	}
+	.pb-100 {
+	    padding-bottom: 40px;
+	}
+	.ptb-100 {
+	    padding: 40px 0;
+	}
+	.pt-88 {
+	    padding-top: 30px;
+	}
+	.pb-88 {
+	    padding-bottom: 30px;
+	}
+	.ptb-88 {
+	    padding: 30px 0;
+	}
+	.pt-36 {
+	    padding-top: 20px;
+	}
+	.pb-36 {
+	    padding-bottom: 20px;
+	}
+	.ptb-36 {
+	    padding: 20px 0;
+	}
+/* TEXT STYLES */
+	.header_title {
+		font-size: 36px;
+	}
+	.tagline {
+		font-size: 14px;
+	}
+	.description {
+		font-size: 12px;
+		line-height: 1.6;
+	}
+	.text_name {
+		font-size: 14px;
+	}
+	.title {
+		font-size: 20px;
+		letter-spacing: 1px;
+	}
+	.title_2 {
+		font-size: 20px;
+	}
+	.title_3 {
+		font-size: 18px;
+	}
+	.steps_item {
+		font-size: 33px;
+	}
+	.animate_numbers {
+		font-size: 60px;
+	}
+	.product_price {
+		font-size: 39px;
+	}
+	.position {
+		font-size: 22px;
+	}
+	.plans_price {
+		font-size: 54px;
+	}
+	.mb-space {
+		margin-bottom: 20px;
+	}
+	.mb-center {
+		text-align: center;
+	}
+	.socials {
+		margin: 0 auto;
+		display: block;
+	}
+/* HEADER */
+	.header {
+		.description {
+			margin-bottom: 32px;
+		}
+		.welcome {
+			.actions {
+				margin-bottom: 32px;
+			}
+		}
+	}
+/* ABOUT */
+	.about {
+	    .welcome {
+	        margin-bottom: 5px;
+	    }
+	    .title {
+	        margin-bottom: 10px;
+	    }
+	    .description {
+	        margin-bottom: 8px;
+	    }
+	    .button {
+	        margin-top: 20px;
+	    }
+	}
+/* MEMBER */
+	.member {
+		&_image {
+			display: none;
+		}
+	}
+/* CLIENTS */
+	.clients {
+		.title {
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
+		.owl-carousel {
+			.owl-dots {
+				.owl-dot {
+					span {
+						margin: 0 3px!important;
+					}
+				}
+			}
+			.owl-prev,
+			.owl-next {
+				line-height: 33px;
+	    	}
+		}
+	}
+/* TEAM */
+	.team {
+		.title {
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
+	}
+/* STEPS */
+	.steps {
+	    .title {
+	        font-size: 20px;
+	    }
+	}
+/* GALLERY */
+	.gallery {
+		.gallery__image_link {
+			img {
+				height: auto;
+				width: 100%;
+			}
+		}
+	}
+/* NUMBERS */
+	.numbers {
+	    &_description {
+	    	font-size: 13px;
+	    }
+	}
+/* PRODUCTS */
+	.product {
+	    padding: 30px 0;
+	    &_info {
+	        .welcome {
+	            margin-bottom: 10px;
+	        }
+	        .title {
+	            margin-bottom: 20px;
+	        }
+	        .description {
+	            margin-bottom: 14px;
+	        }
+	    }
+	    &_price {
+	        margin-bottom: 15px;
+	    }
+	}
+/* QUESTIONS */
+	.questions {
+	    .accordion {
+	    	.card {
+	    		.card-header {
+			        .accordion_title {
+			            padding: 12px 20px 12px 45px;
+			        }
+			    }
+	            .card-block {
+	                padding: 12px 20px 12px 45px;
+	                p {
+	                	padding-right: 0;
+	                }
+	                &:before {
+	                	left: 45px;
+	                	right: 45px;
+	                }
+	                .accordion_content {
+	                	line-height: 1.5;
+	                }
+	                ul {
+	                	li {
+	                		line-height: 1.5;
+	                	}
+	                }
+	            }
+	    	}
+	    }
+	}
+/* VACANCIES */
+	.vacancies {
+	    &_info {
+	        padding-top: 0px;
+	        .position {
+	            margin-bottom: 9px;
+	        }
+	        .description {
+	            margin-bottom: 30px;
+	        }
+	    }
+	}
+/* TESTIMONIALS */
+	.testimonials {
+	    .welcome {
+	        margin-bottom: 9px;
+	    }
+	    .title {
+	        margin-bottom: 30px;
+	    }
+	    .client_info {
+	    	padding-left: 0px;
+	    }
+	    .text_name {
+	        margin-bottom: 5px;
+	        padding-left: 14px;
+	    }
+	    .testimonial_block {
+	        padding: 14px;
+	    }
+	}
+	/* PRICING */
+	.pricing {
+	    &_item {
+	        padding-bottom: 25px;
+	        .plans {
+	        	&_name {
+					font-size: 16px;
+				}
+	            &_title {
+	                padding: 14px 0;
+	                margin-bottom: 25px;
+	            }
+	            &_info {
+	                padding: 0 17px;
+	            }
+	            &_price {
+	                margin-bottom: 25px;
+	                font-size: 30px;
+	            }
+	            &_description {
+	                margin-bottom: 19px;
+	                font-size: 14px;
+	            }
+	        }
+	    }
+	}
+/* PROJECT TIMELINE */
+	.timeline {
+	    padding: 32px 0 15px;
+	    .title {
+	        font-size: 20px;
+	    }
+	    &_image {
+	        margin-bottom: 7px;
+	    }
+	}
+/* CONTACTS */
+	.contacts {
+	    .title {
+	        margin-bottom: 10px;
+	    }
+	    &_description {
+	        margin-bottom: 20px;
+	        font-size: 13px;
+	    }
+	    .form {
+	        &_field {
+	            height: 45px;
+	            padding: 12px 20px;
+	            margin-bottom: 9px;
+	            font-size: 13px;
+	        }
+	        &_textarea {
+	            padding: 12px 20px;
+	            margin-bottom: 9px;
+	            font-size: 13px;
+	        }
+	    }
+	}
+/* FOOTER */
+		.footer {
+		    padding: 25px 0px;
+		    &_logo {
+		        margin-bottom: 10px;
+		    }
+		    .description {
+		        margin-bottom: 20px;
+		    }
+		    .socials {
+		    	margin-bottom: 20px;
+		    }
+		    .links {
+		    	margin-bottom: 20px;
+		    .form {
+		    	margin-top: 20px;
+		    }
+		}
+	}
+}
+/*
+|===================
+| CUSTOM MEDIA QUERIES
+|===================
+*/
+@media screen and (min-width: 1039px) {
+	.header {
+		height: 820px;
+	}
+}

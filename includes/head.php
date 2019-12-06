@@ -1,11 +1,12 @@
 <head>
-<title>
+  <title>
     <?php echo $tituloPagina; ?>
-</title>
+  </title>
 
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="" />
   <link rel="canonical" href="">
   <meta name="author" content="surftware" />
@@ -25,17 +26,21 @@
   <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css" />
 
   <!-- bootstrap 4 -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> 
 
-  <!-- theme styles -->
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  
-   <!-- owl carousel -->
-  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
-   
-   <!-- wow -->
+  <!-- OWL CAROUSEL STYLES -->
+  <link href="css/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- wow -->
   <link rel="stylesheet" type="text/css" href="css/animate.css" />
   <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <!-- LIGHTBOX STYLES -->
+  <link href="css/lightbox.css" rel="stylesheet">
+
+   <!-- CUSTOM CSS-->
+   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
 
 
   <!--[if lt IE 8]>
@@ -46,5 +51,5 @@
 </div>
 <![endif]-->
   <!--termina encabezado-->
-  
+
 </head>
